@@ -6,127 +6,180 @@
 <title>Xan Casino</title>
 
 <style>
-    body {
-        margin: 0;
-        background: #032737;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        color: white;
-        overflow: hidden;
-    }
+  /* Səhifə bazası */
+  :root {
+    --overlay: rgba(0, 0, 0, 0.45); /* fonu bir az tündləşdirən qat */
+    --neon-blue: #00eaff;
+    --gold: #ffcc00;
+    --pink: #ff007e;
+    --cyan: #00ffe1;
+  }
 
-    /* ----------- HƏQİQİ DUMAN EFFEKTİ (SVG) ----------- */
-    .smoke {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 120%;
-        height: 120%;
-        opacity: 0.32;     /* Dumanın görünmə səviyyəsi */
-        z-index: 1;
-        pointer-events: none;
-    }
+  html, body {
+    height: 100%;
+  }
 
-    /* Kontentin üstə çıxması üçün */
-    .content {
-        position: relative;
-        z-index: 10;
-        padding: 40px 20px;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 
-    /* Başlıqlar */
-    h1 {
-        font-size: 32px;
-        color: #ffcc00;
-        text-shadow: 0 0 12px #ffcc00;
-    }
+    /* Arxa fon şəkli — sənin fayl adınla */
+    background-image: url("gsdVcyJEP7XsBthFLTNG5.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 
-    .subtext {
-        font-size: 22px;
-        color: #ff007e;
-        text-shadow: 0 0 12px #ff007e;
-    }
+  /* Tünd overlay: məzmunu oxunaqlı edir */
+  .bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay);
+    z-index: 2;
+    pointer-events: none;
+  }
 
-    .middletext {
-        font-size: 19px;
-        color: #00ffe1;
-        text-shadow: 0 0 12px #00ffe1;
-        margin-bottom: 25px;
-    }
+  /* Duman effekti (isteyə görə saxlaya və ya silə bilərsən) */
+  .smoke {
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    opacity: 0.25;
+    z-index: 1;
+    pointer-events: none;
+  }
 
-    /* Neon blok */
-    .btn-box {
-        margin: 25px auto;
-        width: 90%;
-        max-width: 900px;
-        padding: 15px;
-        background: rgba(0,0,0,0.55);
-        border-radius: 14px;
-        box-shadow: 0 0 22px #00eaff, inset 0 0 25px #00eaff;
-    }
+  /* Kontent */
+  .content {
+    position: relative;
+    z-index: 3; /* overlay və dumanın üstündə */
+    padding: 40px 20px;
+  }
 
-    .btn {
-        display: block;
-        width: 100%;
-        padding: 18px;
-        margin-bottom: 10px;
-        font-size: 22px;
-        color: white;
-        background: rgba(0,0,0,0.7);
-        border: 2px solid #00eaff;
-        border-radius: 14px;
-        text-decoration: none;
-        box-shadow: 0 0 15px #00eaff;
-        transition: .2s;
-    }
+  /* Başlıq və mətnlər */
+  h1 {
+    font-size: 32px;
+    color: var(--gold);
+    text-shadow: 0 0 12px var(--gold);
+    margin: 0 0 10px;
+  }
 
-    .btn:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 30px #00ffff, 0 0 50px #00ffff;
-    }
+  .subtext {
+    font-size: 22px;
+    color: var(--pink);
+    text-shadow: 0 0 12px var(--pink);
+    margin-bottom: 6px;
+  }
 
-    .bonus {
-        font-size: 18px;
-        color: #ffdd00;
-        text-shadow: 0 0 10px #ffdd00;
-    }
+  .middletext {
+    font-size: 19px;
+    color: var(--cyan);
+    text-shadow: 0 0 12px var(--cyan);
+    margin-bottom: 22px;
+  }
+
+  /* Neon bloklar */
+  .btn-box {
+    margin: 20px auto;
+    width: 92%;
+    max-width: 560px; /* mobil üçün uyğun genişlik */
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 14px;
+    box-shadow: 0 0 22px var(--neon-blue), inset 0 0 25px var(--neon-blue);
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--neon-blue);
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 0 15px var(--neon-blue);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+
+  .btn:active,
+  .btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px #00ffff, 0 0 50px #00ffff;
+  }
+
+  .bonus {
+    font-size: 16px;
+    color: #ffdd00;
+    text-shadow: 0 0 10px #ffdd00;
+  }
+
+  /* 777 neon elementi (istəyə görə) */
+  .triple-seven {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #ff2df1;
+    text-shadow: 0 0 10px #ff2df1, 0 0 20px #ff2df1, 0 0 30px #ff2df1;
+  }
+
+  /* Mobil optimizasiya */
+  @media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    .subtext { font-size: 18px; }
+    .middletext { font-size: 16px; }
+    .btn { font-size: 18px; padding: 14px; }
+    .bonus { font-size: 15px; }
+    .triple-seven { font-size: 24px; }
+  }
 </style>
 </head>
 
 <body>
 
-<!-- ********** SVG HƏRƏKƏTLİ DUMAN ********** -->
-<svg class="smoke">
-    <filter id="smokeFilter">
-        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed="2">
-            <animate attributeName="baseFrequency" dur="25s" values="0.01;0.02;0.01" repeatCount="indefinite"/>
-        </feTurbulence>
-        <feDisplacementMap in="SourceGraphic" scale="120"></feDisplacementMap>
-    </filter>
-
-    <rect width="100%" height="100%" filter="url(#smokeFilter)" />
+<!-- Duman effekti (SVG) -->
+<svg class="smoke" aria-hidden="true">
+  <filter id="smokeFilter">
+    <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed="2">
+      <animate attributeName="baseFrequency" dur="25s" values="0.01;0.02;0.01" repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" scale="120"></feDisplacementMap>
+  </filter>
+  <rect width="100%" height="100%" filter="url(#smokeFilter)" />
 </svg>
 
-<!-- ********** KONTENT ********** -->
+<!-- Tünd overlay (oxunaqlıq üçün) -->
+<div class="bg-overlay" aria-hidden="true"></div>
+
+<!-- Kontent -->
 <div class="content">
-    <h1>Xan Casinoya Xoş Gəlmisiniz</h1>
-    <div class="subtext">Ən etibarlı casino</div>
-    <div class="middletext">ən güvənilirli casino</div>
+  <h1>Xan Casinoya Xoş Gəlmisiniz</h1>
+  <div class="subtext">Ən etibarlı casino</div>
+  <div class="middletext">Mobil üçün optimallaşdırılmış neon kazino təcrübəsi</div>
+  <div class="triple-seven">777</div>
 
-    <div class="btn-box">
-        <a class="btn" href="https://t.me/" target="_blank">Telegram</a>
-        <div class="bonus">İlk depozitə 10% bonus</div>
-    </div>
+  <div class="btn-box">
+    <a class="btn" href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+    <div class="bonus">İlk depozitə 10% bonus</div>
+  </div>
 
-    <div class="btn-box">
-        <a class="btn" href="https://wa.me/" target="_blank">Kod almaq üçün WhatsApp</a>
-        <div class="bonus">İlk depozitə 10% bonus</div>
-    </div>
+  <div class="btn-box">
+    <a class="btn" href="https://wa.me/" target="_blank" rel="noopener">Kod almaq üçün WhatsApp</a>
+    <div class="bonus">İlk depozitə 10% bonus</div>
+  </div>
 
-    <div class="btn-box">
-        <a class="btn" href="https://fastloto.com/" target="_blank">FastLoto.com</a>
-        <div class="bonus">İlk depozitə 10% bonus</div>
-    </div>
+  <div class="btn-box">
+    <a class="btn" href="https://fastloto.com/" target="_blank" rel="noopener">FastLoto.com</a>
+    <div class="bonus">İlk depozitə 10% bonus</div>
+  </div>
 </div>
 
 </body>
