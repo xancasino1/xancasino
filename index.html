@@ -3,154 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xan Casino</title>
+<title>XAN CASINO</title>
 
 <style>
-  :root {
-    --overlay: rgba(0, 0, 0, 0.50);
-    --neon-blue: #00eaff;
-    --gold: #ffcc00;
-    --pink: #ff007e;
-    --cyan: #00ffe1;
-  }
-
-  html, body {
-    height: 100%;
-  }
-
   body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    background: #02142b; /* Tünd mavi fon */
     text-align: center;
     color: white;
-
-    /* Mobilə uyğun casino fonu — sənin şəkilin */
-    background-image: url("https://files.catbox.moe/hl3q2w.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-
-    overflow-y: auto;
   }
 
-  /* Tünd overlay */
-  .bg-overlay {
-    position: fixed;
-    inset: 0;
-    background: var(--overlay);
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .content {
-    position: relative;
-    z-index: 3;
-    padding: 40px 20px 90px;
-  }
-
-  /* Yazılar */
   h1 {
-    font-size: 32px;
-    background: linear-gradient(90deg, gold, orange, red);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 18px gold;
+    margin-top: 40px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #00eaff;
+    text-shadow: 0 0 20px #00eaff;
   }
 
-  .subtext {
-    font-size: 22px;
-    color: var(--pink);
-    text-shadow: 0 0 12px var(--pink);
+  .subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00ffe1;
+    text-shadow: 0 0 10px #00ffe1;
   }
 
-  .middletext {
-    font-size: 19px;
-    color: var(--cyan);
-    text-shadow: 0 0 12px var(--cyan);
-    margin-bottom: 22px;
-  }
-
-  /* 777 neon */
-  .triple-seven {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 30px;
-    color: #ff2df1;
-    text-shadow: 0 0 15px #ff2df1, 0 0 30px #ff2df1;
-  }
-
-  /* Neon düymə blokları */
-  .btn-box {
-    margin: 20px auto;
-    width: 92%;
-    max-width: 560px;
-    padding: 16px;
-    background: rgba(0,0,0,0.55);
-    border-radius: 15px;
-    box-shadow: 0 0 25px var(--neon-blue), inset 0 0 20px var(--neon-blue);
+  .buttons {
+    margin-top: 35px;
+    width: 90%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .btn {
     display: block;
-    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00eaff;
     padding: 16px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
     color: white;
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid var(--neon-blue);
-    border-radius: 14px;
+    font-size: 20px;
     text-decoration: none;
-    box-shadow: 0 0 18px var(--neon-blue);
-    transition: 0.18s;
+    text-shadow: 0 0 10px #00eaff;
+    box-shadow: 0 0 20px #00eaff;
+    transition: 0.2s;
   }
 
   .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
     box-shadow: 0 0 35px cyan, 0 0 70px cyan;
   }
 
-  .bonus {
-    font-size: 16px;
+  .info {
+    margin-top: 20px;
     color: gold;
+    font-size: 18px;
     text-shadow: 0 0 10px gold;
-  }
-
-  /* Mobil optimizasiya */
-  @media (max-width: 600px) {
-    h1 { font-size: 27px; }
-    .subtext { font-size: 18px; }
-    .middletext { font-size: 16px; }
-    .btn { font-size: 18px; padding: 14px; }
   }
 </style>
 </head>
 
 <body>
 
-<!-- Overlay -->
-<div class="bg-overlay"></div>
+<h1>XAN CASINO</h1>
 
-<div class="content">
-  <h1>Xan Casinoya Xoş Gəlmisiniz</h1>
-  <div class="subtext">Ən etibarlı casino</div>
-  <div class="middletext">Mobil üçün optimallaşdırılmış neon kazino təcrübəsi</div>
-  <div class="triple-seven">777</div>
+<div class="subtitle">
+  xan casinoya xoş gəlmisiniz tam güvənirli və tam etibarlı yeganə kazino
+</div>
 
-  <div class="btn-box">
-    <a class="btn" href="https://t.me/" target="_blank">Telegram</a>
-    <div class="bonus">İlk depozitə 10% bonus</div>
-  </div>
+<div class="buttons">
 
-  <div class="btn-box">
-    <a class="btn" href="https://wa.me/" target="_blank">Kod almaq üçün WhatsApp</a>
-    <div class="bonus">İlk depozitə 10% bonus</div>
-  </div>
+  <a class="btn" href="https://t.me/xancasino1" target="_blank">
+    Telegram ilə giriş
+  </a>
 
-  <div class="btn-box">
-    <a class="btn" href="https://fastloto.com/" target="_blank">FastLoto.com</a>
-    <div class="bonus">İlk depozitə 10% bonus</div>
-  </div>
+  <a class="btn" href="https://wa.me/998934559606" target="_blank">
+    Kod almaq (WhatsApp)
+  </a>
+
+  <a class="btn" href="https://fastloto.com" target="_blank">
+    FastLoto.com
+  </a>
+
+</div>
+
+<div class="info">
+  İlk depozit üçün 10% bonus <br>
+  Minimum depozit: 10 manat <br>
+  Minimum çıxarış: 30 manat
 </div>
 
 </body>
