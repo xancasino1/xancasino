@@ -6,134 +6,171 @@
 <title>Xan Casino</title>
 
 <style>
-  :root {
-    --bg: #010b19;
-    --gold: #ffd700;
-    --pink: #ff008c;
-    --cyan: #00eaff;
-    --gradient: linear-gradient(90deg, #00eaff, #ff00c8, #ffd700);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: white;
-  }
+:root {
+  --bg: #010b19;
+  --gold: #ffd700;
+  --pink: #ff008c;
+  --cyan: #00eaff;
+  --gradient: linear-gradient(90deg, #00eaff, #ff00c8, #ffd700);
+}
 
-  h1 {
-    margin-top: 26px;
-    font-size: 48px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: var(--gold);
-    text-shadow:
-      0 0 15px var(--gold),
-      0 0 30px var(--gold),
-      0 0 45px var(--gold),
-      0 0 60px #b89b00;
-    animation: strongFlicker 1.3s infinite alternate;
-  }
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  animation: pageFade 0.9s ease forwards;
+}
 
-  @keyframes strongFlicker {
-    0%   { opacity: 1; text-shadow: 0 0 45px var(--gold); }
-    30%  { opacity: 0.6; text-shadow: 0 0 15px #775f00; }
-    60%  { opacity: 1; text-shadow: 0 0 55px var(--gold); }
-    100% { opacity: 0.5; text-shadow: 0 0 20px #6a5800; }
-  }
+/* Açılış fade */
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
-  .subtext {
-    font-size: 19px;
-    color: var(--pink);
-    margin-top: -12px;
-    text-shadow: 0 0 18px var(--pink);
-  }
+/* Neon badge */
+.badge {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 16px;
+  font-size: 14px;
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ff008c, #ffd700);
+  box-shadow: 0 0 12px #ff00c8, 0 0 22px #ffd700;
+  animation: badgeGlow 2.5s ease-in-out infinite;
+}
 
-  .desc {
-    font-size: 16px;
-    margin: 10px auto 22px;
-    color: var(--cyan);
-    width: 90%;
-    max-width: 500px;
-    text-shadow: 0 0 14px var(--cyan);
-  }
+@keyframes badgeGlow {
+  0%,100% { box-shadow: 0 0 12px #ff00c8; }
+  50% { box-shadow: 0 0 24px #ffd700; }
+}
 
-  .btn-box {
-    width: 92%;
-    max-width: 500px;
-    margin: 18px auto;
-    padding: 16px;
-    border-radius: 18px;
-    background: rgba(0, 0, 0, 0.45);
-    box-shadow:
-        0 0 25px var(--cyan),
-        inset 0 0 25px var(--cyan);
-  }
+h1 {
+  margin-top: 18px;
+  font-size: 48px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: var(--gold);
+  text-shadow:
+    0 0 15px var(--gold),
+    0 0 30px var(--gold),
+    0 0 45px var(--gold);
+}
 
-  .btn {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    margin-bottom: 10px;
-    background: var(--gradient);
-    border: 0;
-    border-radius: 14px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    box-shadow: 0 0 25px #00cfff, 0 0 45px #ff00f7;
-    transition: 0.18s ease;
-  }
+.subtext {
+  font-size: 19px;
+  color: var(--pink);
+  margin-top: -10px;
+  text-shadow: 0 0 16px var(--pink);
+}
 
-  .btn:hover {
-    transform: scale(1.06);
-    box-shadow:
-      0 0 35px #00cfff,
-      0 0 60px #ff00f7,
-      0 0 90px #ffd700;
-  }
+.desc {
+  font-size: 16px;
+  margin: 10px auto 22px;
+  color: var(--cyan);
+  width: 90%;
+  max-width: 500px;
+  text-shadow: 0 0 14px var(--cyan);
+}
 
-  .glow-line {
-    width: 70%;
-    height: 3px;
-    margin: 18px auto -5px;
-    background: var(--gradient);
-    border-radius: 4px;
-    box-shadow: 0 0 22px #00eaff, 0 0 32px #ff00e1;
-  }
+.glow-line {
+  width: 70%;
+  height: 3px;
+  margin: 18px auto -5px;
+  background: var(--gradient);
+  border-radius: 4px;
+  box-shadow: 0 0 18px #00eaff;
+}
 
-  .info-box {
-    margin-top: 32px;
-    margin-bottom: 28px;
-    font-size: 16px;
-    color: var(--gold);
-    text-shadow: 0 0 18px var(--gold);
-  }
+.btn-box {
+  width: 92%;
+  max-width: 500px;
+  margin: 18px auto;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.45);
+  box-shadow: 0 0 22px var(--cyan), inset 0 0 22px var(--cyan);
+}
 
-  .info-box div {
-    margin: 6px 0;
-  }
+.btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 10px;
+  background: var(--gradient);
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 0 20px #00cfff, 0 0 40px #ff00f7;
+  transition: 0.2s ease;
+}
 
-  /* Yeni xüsusi bonus stili */
-  .special-bonus {
-    margin-top: 10px;
-    font-size: 15px;
-    color: var(--pink);
-    text-shadow: 0 0 16px var(--pink);
-    border-top: 1px dashed rgba(255,255,255,0.25);
-    padding-top: 10px;
-  }
+.btn:hover {
+  transform: scale(1.05);
+}
 
-  @media (max-width: 600px) {
-    h1 { font-size: 38px; }
-    .btn { font-size: 18px; padding: 14px; }
-    .desc { font-size: 15px; }
-  }
+.info-box {
+  margin-top: 30px;
+  margin-bottom: 28px;
+  font-size: 16px;
+  color: var(--gold);
+  text-shadow: 0 0 16px var(--gold);
+}
+
+.info-box div {
+  margin: 6px 0;
+}
+
+/* Xüsusi bonus */
+.special-bonus {
+  margin-top: 14px;
+  padding: 14px;
+  font-family: 'Pacifico', cursive;
+  font-size: 18px;
+  color: #ff4dd2;
+  background: rgba(255,0,140,0.1);
+  border-radius: 14px;
+  text-shadow: 0 0 12px #ff4dd2;
+  animation: softPulse 2.4s ease-in-out infinite;
+}
+
+.special-bonus strong {
+  color: #ffd700;
+}
+
+/* Bonus ikonu */
+.bonus-icon {
+  display: inline-block;
+  margin-right: 6px;
+  animation: iconBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes iconBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 38px; }
+  .btn { font-size: 18px; padding: 14px; }
+  .special-bonus { font-size: 17px; }
+}
 </style>
 </head>
 
 <body>
+
+<div class="badge">🔥 Xüsusi Təklif</div>
 
 <h1>XAN CASINO</h1>
 
@@ -145,7 +182,6 @@
 
 <div class="glow-line"></div>
 
-<!-- WhatsApp 1-ci yerdə -->
 <div class="btn-box">
   <a class="btn" href="https://wa.me/998934559606" target="_blank">
     Kod almaq üçün WhatsApp
@@ -165,9 +201,10 @@
   <div>Minimum depozit: 10 manat</div>
   <div>Minimum çıxarış: 30 manat</div>
 
-  <!-- Yeni əlavə mətn -->
   <div class="special-bonus">
-    dayimi olan oyuncularin etdiyi 5-ci depozitdə 100% bonus
+    <span class="bonus-icon">🎁</span>
+    dayimi olan oyuncuların etdiyi 5-ci depozitdə<br>
+    <strong>100% BONUS</strong>
   </div>
 </div>
 
