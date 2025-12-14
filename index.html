@@ -22,9 +22,8 @@
     color: white;
   }
 
-  /* Gücləndirilmiş qızılı neon XAN CASINO */
   h1 {
-    margin-top: 30px;
+    margin-top: 26px;
     font-size: 48px;
     letter-spacing: 3px;
     font-weight: bold;
@@ -53,28 +52,25 @@
 
   .desc {
     font-size: 16px;
-    margin: 10px auto 25px;
+    margin: 10px auto 22px;
     color: var(--cyan);
     width: 90%;
     max-width: 500px;
     text-shadow: 0 0 14px var(--cyan);
   }
 
-  /* Neon buton bölməsi */
   .btn-box {
-    width: 90%;
+    width: 92%;
     max-width: 500px;
-    margin: 22px auto;
-    padding: 18px;
+    margin: 18px auto;
+    padding: 16px;
     border-radius: 18px;
     background: rgba(0, 0, 0, 0.45);
     box-shadow:
         0 0 25px var(--cyan),
-        inset 0 0 25px var(--cyan),
-        0 0 8px var(--cyan);
+        inset 0 0 25px var(--cyan);
   }
 
-  /* Gradient + Glow neon butonlar */
   .btn {
     display: block;
     width: 100%;
@@ -90,7 +86,6 @@
     transition: 0.18s ease;
   }
 
-  /* Daha güclü hover */
   .btn:hover {
     transform: scale(1.06);
     box-shadow:
@@ -99,20 +94,18 @@
       0 0 90px #ffd700;
   }
 
-  /* Parıldayan xətt */
   .glow-line {
     width: 70%;
     height: 3px;
-    margin: 20px auto -5px;
+    margin: 18px auto -5px;
     background: var(--gradient);
     border-radius: 4px;
     box-shadow: 0 0 22px #00eaff, 0 0 32px #ff00e1;
   }
 
-  /* Ən aşağı məlumat bloku */
   .info-box {
-    margin-top: 35px;
-    margin-bottom: 25px;
+    margin-top: 32px;
+    margin-bottom: 28px;
     font-size: 16px;
     color: var(--gold);
     text-shadow: 0 0 18px var(--gold);
@@ -122,9 +115,20 @@
     margin: 6px 0;
   }
 
+  /* Yeni xüsusi bonus stili */
+  .special-bonus {
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--pink);
+    text-shadow: 0 0 16px var(--pink);
+    border-top: 1px dashed rgba(255,255,255,0.25);
+    padding-top: 10px;
+  }
+
   @media (max-width: 600px) {
-    h1 { font-size: 40px; }
+    h1 { font-size: 38px; }
     .btn { font-size: 18px; padding: 14px; }
+    .desc { font-size: 15px; }
   }
 </style>
 </head>
@@ -141,12 +145,15 @@
 
 <div class="glow-line"></div>
 
+<!-- WhatsApp 1-ci yerdə -->
 <div class="btn-box">
-  <a class="btn" href="https://t.me/xancasino1" target="_blank">Telegram</a>
+  <a class="btn" href="https://wa.me/998934559606" target="_blank">
+    Kod almaq üçün WhatsApp
+  </a>
 </div>
 
 <div class="btn-box">
-  <a class="btn" href="https://wa.me/998934559606" target="_blank">Kod almaq üçün WhatsApp</a>
+  <a class="btn" href="https://t.me/xancasino1" target="_blank">Telegram</a>
 </div>
 
 <div class="btn-box">
@@ -157,6 +164,11 @@
   <div>İlk depozit üçün 10% bonus</div>
   <div>Minimum depozit: 10 manat</div>
   <div>Minimum çıxarış: 30 manat</div>
+
+  <!-- Yeni əlavə mətn -->
+  <div class="special-bonus">
+    dayimi olan oyuncularin etdiyi 5-ci depozitdə 100% bonus
+  </div>
 </div>
 
 </body>
