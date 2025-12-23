@@ -29,62 +29,172 @@ h1 {
   font-size: 52px;
   letter-spacing: 4px;
   color: var(--gold);
-  text-shadow:0 0 12px var(--gold),0 0 28px var(--gold),0 0 55px #ffea70,0 0 90px #b89b00;
+  text-shadow:
+    0 0 12px var(--gold),
+    0 0 28px var(--gold),
+    0 0 55px #ffea70,
+    0 0 90px #b89b00;
   animation: neonFlicker 3.2s infinite;
 }
 
 @keyframes neonFlicker {
-  0% { opacity: 1; } 4% { opacity: .4; } 6% { opacity: 1; }
-  38% { opacity: .3; } 40% { opacity: 1; } 100% { opacity: 1; }
+  0% { opacity: 1; }
+  4% { opacity: .4; }
+  6% { opacity: 1; }
+  38% { opacity: .3; }
+  40% { opacity: 1; }
+  100% { opacity: 1; }
 }
 
-.subtext { font-family: 'Pacifico', cursive; font-size: 20px; color: var(--pink); margin-top: -10px; text-shadow: 0 0 16px var(--pink); }
-.desc { font-family: 'Poppins', sans-serif; font-size: 16px; margin: 12px auto 10px; max-width: 500px; color: var(--cyan); }
-.status-line { font-size: 13px; opacity: .85; margin-top: 6px; }
-.status-live { color: #00ff9c; }
-.clock { font-size: 13px; color: #aaa; margin-top: 4px; }
-.glow-line { width: 70%; height: 3px; margin: 16px auto; background: linear-gradient(90deg,#00eaff,#ff00c8,#ffd700); box-shadow: 0 0 18px var(--cyan); }
-.features { font-size: 14px; opacity: .85; margin: 8px auto 6px; }
-.features span { margin: 0 6px; }
-.age { font-size: 13px; opacity: .6; margin-top: 6px; }
+.subtext {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  color: var(--pink);
+  margin-top: -10px;
+  text-shadow: 0 0 16px var(--pink);
+}
 
-.btn-box { width: 92%; max-width: 500px; margin: 16px auto; padding: 16px; border-radius: 18px; background: var(--card); }
-.btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px; border-radius: 14px; font-size: 20px; text-decoration: none; color: #fff; margin-bottom: 10px; transition: .2s ease; }
-.btn-whatsapp { background: linear-gradient(90deg,#00ff9c,#00c853); box-shadow: 0 0 18px #00ff9c; }
-.btn-instagram { background: linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045); box-shadow: 0 0 18px rgba(253,29,29,0.6); }
-.btn-fastloto { background: linear-gradient(90deg,#ff008c,#ffd700,#ff008c); box-shadow: 0 0 25px #ffd700,0 0 45px #ff008c; font-weight: bold; }
-.btn-card { background: linear-gradient(90deg,#3a3a3a,#6b5b95); box-shadow: 0 0 14px rgba(155,120,255,0.6); font-size: 14px; padding: 10px; }
-.btn:hover { transform: scale(1.05); }
+.desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin: 12px auto 10px;
+  max-width: 500px;
+  color: var(--cyan);
+}
 
-.info-box { margin: 18px auto 8px; font-size: 16px; color: var(--gold); }
-.special-bonus { margin-top: 14px; padding: 14px; font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600; background: rgba(255,215,0,0.08); border-radius: 14px; color: #ffd700; box-shadow: 0 0 14px rgba(255,215,0,0.6); }
-.stats { font-size: 12px; opacity: .6; margin-top: 8px; }
+/* YÜNGÜL STATUSLAR */
+.status-line {
+  font-size: 13px;
+  opacity: .85;
+  margin-top: 6px;
+}
+.status-live {
+  color: #00ff9c;
+}
 
-@media (max-width:600px) { h1 { font-size: 38px; } .btn { font-size: 18px; } }
+/* SAAT */
+.clock {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 4px;
+}
 
-/* BONUS ÇARXI */
-.wheel-box { margin: 20px auto; padding: 16px; width: 280px; background: var(--card); border-radius: 18px; box-shadow:0 0 25px rgba(255,215,0,0.4);}
-#wheel { width: 240px; height: 240px; margin: 10px auto; border-radius:50%; border:6px solid gold; position: relative; transition: transform 4s ease-out; background: conic-gradient(#16a34a 0deg 60deg,#22c55e 60deg 120deg,#3b82f6 120deg 180deg,#a855f7 180deg 240deg,#f59e0b 240deg 300deg,#dc2626 300deg 360deg); }
-#wheel span { position:absolute; width:50%; text-align:right; right:0; top:50%; transform-origin:left center; font-weight:bold; font-size:16px; color:#fff; }
-#wheel span:nth-child(1){ transform: rotate(30deg);}
-#wheel span:nth-child(2){ transform: rotate(90deg);}
-#wheel span:nth-child(3){ transform: rotate(150deg);}
-#wheel span:nth-child(4){ transform: rotate(210deg);}
-#wheel span:nth-child(5){ transform: rotate(270deg); color:red;}
-#wheel span:nth-child(6){ transform: rotate(330deg);}
+.glow-line {
+  width: 70%;
+  height: 3px;
+  margin: 16px auto;
+  background: linear-gradient(90deg,#00eaff,#ff00c8,#ffd700);
+  box-shadow: 0 0 18px var(--cyan);
+}
 
-.pointer { font-size:24px; color:red; margin-bottom:10px; }
-.spin-btn { padding:12px; font-size:16px; border:none; border-radius:10px; background:gold; cursor:pointer; margin-top:10px; }
-.spin-btn:disabled { background:#888; cursor:not-allowed; }
-#resultBtn { display:none; margin-top:12px; padding:12px; background:linear-gradient(90deg,#00ff9c,#00c853); border-radius:12px; color:#000; font-weight:bold; text-decoration:none; }
-#limitMsg { display:none; color:#ff6b6b; margin-top:10px; font-size:14px; }
+/* ÜSTÜNLÜKLƏR */
+.features {
+  font-size: 14px;
+  opacity: .85;
+  margin: 8px auto 6px;
+}
+.features span {
+  margin: 0 6px;
+}
+
+/* 18+ */
+.age {
+  font-size: 13px;
+  opacity: .6;
+  margin-top: 6px;
+}
+
+.btn-box {
+  width: 92%;
+  max-width: 500px;
+  margin: 16px auto;
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--card);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: .2s ease;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(90deg,#00ff9c,#00c853);
+  box-shadow: 0 0 18px #00ff9c;
+}
+
+.btn-instagram {
+  background: linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045);
+  box-shadow: 0 0 18px rgba(253,29,29,0.6);
+}
+
+.btn-fastloto {
+  background: linear-gradient(90deg,#ff008c,#ffd700,#ff008c);
+  box-shadow:
+    0 0 25px #ffd700,
+    0 0 45px #ff008c;
+  font-weight: bold;
+}
+
+.btn-card {
+  background: linear-gradient(90deg,#3a3a3a,#6b5b95);
+  box-shadow: 0 0 14px rgba(155,120,255,0.6);
+  font-size: 14px;
+  padding: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.info-box {
+  margin: 18px auto 8px;
+  font-size: 16px;
+  color: var(--gold);
+}
+
+/* BONUS */
+.special-bonus {
+  margin-top: 14px;
+  padding: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  background: rgba(255,215,0,0.08);
+  border-radius: 14px;
+  color: #ffd700;
+  box-shadow: 0 0 14px rgba(255,215,0,0.6);
+}
+
+/* STATISTIKA */
+.stats {
+  font-size: 12px;
+  opacity: .6;
+  margin-top: 8px;
+}
+
+@media (max-width:600px) {
+  h1 { font-size: 38px; }
+  .btn { font-size: 18px; }
+}
 </style>
 </head>
+
 <body>
 
 <h1>XAN CASINO</h1>
 
 <div class="subtext">Xan kazinoya Xoş Gəlmisiniz</div>
+
 <div class="desc">⭐ Tam güvənilir və tam etibarlı yeganə kazino</div>
 
 <div class="status-line status-live">● Canlı dəstək aktivdir</div>
@@ -100,37 +210,36 @@ h1 {
 
 <div class="glow-line"></div>
 
-<!-- BONUS ÇARXI -->
-<div class="wheel-box">
-  <div class="pointer">▼</div>
-  <div id="wheel">
-    <span>10%</span>
-    <span>15%</span>
-    <span>20%</span>
-    <span>30%</span>
-    <span>40%</span>
-    <span>50%</span>
-  </div>
-  <button class="spin-btn" id="spinBtn">🎁 Bonus Çarxını Fırlat</button>
-  <div id="limitMsg">⛔ Bu gün artıq fırlatma etdiniz</div>
-  <a id="resultBtn" target="_blank">🎉 BONUS QAZANDIN</a>
-</div>
-
 <div class="btn-box">
-  <a class="btn btn-whatsapp track" href="https://wa.me/998934559606?text=Salam%20depozit%20etmek%20isdiyirdim%20zehmet%20olmasa%20kart%20atardiz!" target="_blank">🟢 WhatsApp</a>
-  <a class="btn btn-instagram track" href="https://www.instagram.com/xan.casino?igsh=MW8ydWh3MXVwc281ZA==" target="_blank">📸 Instagram</a>
-  <a class="btn btn-fastloto track" href="https://fastloto.com" target="_blank">🎰 Fastloto</a>
-  <a class="btn btn-card track" href="https://wa.me/998934559606?text=Salam%20men%20oz%20kartimi%20satmaq%20isdiyirdim!" target="_blank">💳 30 manata Leo Bank / Unibank kartları alınır</a>
+
+  <a class="btn btn-whatsapp track" href="https://wa.me/998934559606?text=Salam%20depozit%20etmek%20isdiyirdim%20zehmet%20olmasa%20kart%20atardiz!" target="_blank">
+    🟢 WhatsApp
+  </a>
+
+  <a class="btn btn-instagram track" href="https://www.instagram.com/xan.casino?igsh=MW8ydWh3MXVwc281ZA==" target="_blank">
+    📸 Instagram
+  </a>
+
+  <a class="btn btn-fastloto track" href="https://fastloto.com" target="_blank">
+    🎰 Fastloto
+  </a>
+
+  <a class="btn btn-card track" href="https://wa.me/998934559606?text=Salam%20men%20oz%20kartimi%20satmaq%20isdiyirdim!" target="_blank">
+    💳 30 manata Leo Bank / Unibank kartları alınır
+  </a>
+
 </div>
 
 <div class="info-box">
   <div>İlk depozit üçün 10% bonus</div>
   <div>Minimum depozit: 10 manat</div>
   <div>Minimum çıxarış: 30 manat</div>
+
   <div class="special-bonus">
     🎁 Daimi oyunçular üçün 5-ci depozitdə <br>
     <strong>100% BONUS</strong>
   </div>
+
   <div class="stats" id="stats">🔥 Bugün 127 aktiv istifadəçi</div>
 </div>
 
@@ -138,49 +247,20 @@ h1 {
 /* SAAT */
 function updateClock() {
   const d = new Date();
-  document.getElementById('clock').innerText = '⏰ ' + d.toLocaleTimeString('az-AZ');
+  const t = d.toLocaleTimeString('az-AZ');
+  document.getElementById('clock').innerText = '⏰ ' + t;
 }
-setInterval(updateClock,1000); updateClock();
+setInterval(updateClock, 1000);
+updateClock();
 
-/* KLIK STATISTIKASI */
-let clicks=127;
+/* KLIK STATISTIKASI (yüngül, lokal) */
+let clicks = 127;
 document.querySelectorAll('.track').forEach(b=>{
-  b.addEventListener('click',()=>{
+  b.addEventListener('click', ()=>{
     clicks++;
-    document.getElementById('stats').innerText='🔥 Bugün '+clicks+' aktiv istifadəçi';
+    document.getElementById('stats').innerText =
+      '🔥 Bugün ' + clicks + ' aktiv istifadəçi';
   });
-});
-
-/* BONUS ÇARXI GÜNDƏ 1 DƏFƏ */
-const today=new Date().toDateString();
-const lastSpin=localStorage.getItem("spinDate");
-const spinBtn=document.getElementById("spinBtn");
-const wheel=document.getElementById("wheel");
-const resultBtn=document.getElementById("resultBtn");
-const limitMsg=document.getElementById("limitMsg");
-
-if(lastSpin===today){ spinBtn.disabled=true; limitMsg.style.display="block"; }
-
-spinBtn.addEventListener("click", ()=>{
-  spinBtn.disabled=true;
-
-  const chances=[
-    {b:"10%",w:35},{b:"15%",w:30},{b:"20%",w:20},
-    {b:"30%",w:8},{b:"40%",w:5},{b:"50%",w:2}
-  ];
-  let pool=[];
-  chances.forEach(c=>{for(let i=0;i<c.w;i++) pool.push(c.b);});
-  const win=pool[Math.floor(Math.random()*pool.length)];
-  const angles={"10%":330,"15%":30,"20%":90,"30%":150,"40%":210,"50%":270};
-  wheel.style.transform="rotate("+(360*6+angles[win])+"deg)";
-
-  setTimeout(()=>{
-    const msg=`${win} bonus qazandim depozit etmek isdiyirem kart atardiz`;
-    resultBtn.innerText=`🎉 ${win} BONUS QAZANDIN`;
-    resultBtn.href="https://wa.me/998934559606?text="+encodeURIComponent(msg);
-    resultBtn.style.display="block";
-    localStorage.setItem("spinDate",today);
-  },4000);
 });
 </script>
 
